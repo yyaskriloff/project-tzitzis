@@ -1,8 +1,0 @@
-<svg width="216" height="216" viewBox="0 0 216 216" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="108" cy="108" r="108" fill="#0CCB97"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M108.221 76.5677C122.887 76.5677 134.777 62.938 134.777 46.1249C134.777 43.6713 134.524 41.2855 134.046 39H165.22V146.521H51.2214V39H82.3954C81.9173 41.2855 81.6641 43.6713 81.6641 46.1249C81.6641 62.938 93.5538 76.5677 108.221 76.5677Z" fill="white"/>
-<line x1="155.198" y1="133.413" x2="170.152" y2="176.216" stroke="white" stroke-width="5"/>
-<line y1="-2.5" x2="45.3403" y2="-2.5" transform="matrix(-0.329812 0.944046 0.944046 0.329812 63.1616 134.731)" stroke="white" stroke-width="5"/>
-<line x1="157.973" y1="131.742" x2="182.116" y2="170.12" stroke="white" stroke-width="5"/>
-<line y1="-2.5" x2="45.3403" y2="-2.5" transform="matrix(-0.532496 0.846433 0.846433 0.532496 60.1436 133.567)" stroke="white" stroke-width="5"/>
-</svg>
