@@ -1,0 +1,9 @@
+---
+const { url, text } = Astro.props;
+const currentUrl = Astro.url
+const isActive = currentUrl.pathname === url;
+const classList = `${isActive ? 'text-green' : ''}`
+
+---
+
+<li><a class={classList} href={url}>{text}</a></li>

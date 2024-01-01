@@ -1,0 +1,83 @@
+---
+import HTML from "@components/html.astro";
+import Header from "@components/header.astro"
+import {Image} from "astro:assets"
+import HeaderImage from "@assets/images/Home pg banner.png"
+import PictureCarousel from "@components/PictureCarousel.jsx"
+import WorldSVG from "@assets/country_icon_in_circle.svg"
+import TzitzisSVG from "@assets/tzitzis_in_circle.svg"
+import eventsSVG from "@assets/event_icon_in_circle.svg"
+import TitleImage from "@components/title-image.astro"
+import MexicoImage from "@assets/images/Aron_s_pic.png"
+import SeriesDisplay from "@components/series-display.astro"
+---
+
+<HTML>
+  <Header>
+    <Image src={HeaderImage} alt="" class="w-full h-full object-cover object-[58%_50%]" slot="bg-img"/>
+    <div>Hello</div>
+    <button slot="btn">Hello World</button>
+  </Header>
+  <section id="pt-by-numbers">
+    <div>
+      <img src={WorldSVG.src} alt="">
+      <span>25+ Countries</span>
+    </div>
+    <div>
+      <img src={TzitzisSVG.src} alt="">
+      <span>22,000</span>
+    </div>
+    <div>
+      <img src={eventsSVG.src} alt="">
+      <span>40+ events</span>
+    </div>
+  </section>
+  <section id="pic-grid">
+    <div class="grid grid-cols-1">
+      <TitleImage text="mexico" src={MexicoImage.src}/>
+      <div>
+        <p>If you’re a Jewish male over age 13, you get a mitzvah for every minute of the day you wear a kosher pair of tzitzis.And guess what? It’s just a t-shirt with strings!<span>FREE!</span></p>
+        <button>Order A Pair</button>
+      </div>
+      <TitleImage text="ukraine" src=src={MexicoImage.src}/>
+      <div>
+        <h3>What is Project Tzitzis</h3>
+        <p>Project Tzitzis is all about making tzitzis accessible to anyone who is obligated to wear them, anywhere in the world.</p>
+      </div>
+      <TitleImage text="israel" src=src={MexicoImage.src}/>
+      <div>
+        <p>You can order a pair for yourself or a friend, or get in touch to organize a Project Tzitzis event for your school, camp or community.</p>
+        <div>
+          <button>Order A Pair</button>
+          <button>Contact Us</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <PictureCarousel>
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+  </PictureCarousel>
+  <section id="series-cat">
+<div>
+  <h2>Learn More About Tzitzis</h2>
+  <SeriesDisplay
+   heading="Project Tzitzis + Lost Princess Initiative"
+   secondary="Lost Princess Initiative"
+   video="" 
+   button="Find Out More">
+   Join us as Rav Leibish Hundert takes us beyond the surface of the mitzvah of tzitzis, revealing the awesome depth of this incredible mitzvah through the lens of Chassidus and P'nimiyus HaTorah.
+</SeriesDisplay>
+</div>
+  </section>
+  <section id="donate-prompt">
+    <div>
+      <h2>Want To Have A Part<br>In Spreading This Awesome Mitzvah?</h2>
+      <button>Donate to Project Tzitzis</button>
+      <p>Donations go directly to distributing new tzitzis.<br>And the merit goes to you!</p>
+  </div>
+  </section>
+</HTML>

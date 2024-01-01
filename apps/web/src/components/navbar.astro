@@ -1,0 +1,43 @@
+---
+import NavLink from "./nav-link.astro";
+import BurgerBar from "@assets/bars-solid.svg";
+import Logo from "@assets/ProjectTzizis_Logo.svg"
+import { Image } from "astro:assets";
+const links = [
+  { url: "/", text: "Home" },
+  { url: "/order", text: "Get My Tzitzis" },
+  { url: "/gallery", text: "Gallery" },
+  { url: "/about", text: "About" },
+  { url: "/events", text: "Events" },
+  { url: "/contact", text: "Contact" },
+  { url: "/donate", text: "Donate" },
+];
+---
+
+<nav class="overflow-hidden w-full h-20 p-2 pl-3 flex flex-row justify-between items-center fixed z-50">
+  <!-- img wrapper -->
+  <div class="aspect-square w-16">
+    <Image src={Logo} alt="Projet Tzitzis Logo"/>
+  </div>
+  <!-- link and button wrapper -->
+  <div class="relative">
+    <!-- button wrapper -->
+    <div class="aspect-square w-6 relative z-50 hover:cursor-pointer" id="nav-button">
+      <svg  viewBox="0 0 448 512" class="stroke-white">
+        <!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+        <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+    </div>
+    <!-- link wrapper -->
+    <div class="fixed w-screen h-screen py-24 z-40 top-0 right-0 bottom-0 left-0 bg-white data-[open]:translate-x-0 translate-x-full transition-transform"  id="nav-wrapper">
+      <ul class="w-full h-full flex flex-col justify-between items-center">
+        {links.map(({ url, text }) => <NavLink url={url} text={text} />)}
+      </ul>
+    </div>
+  </div>
+</nav>
+<script>
+  const btn = document.querySelector("#nav-button");
+  const navWrapper = document.querySelector("#nav-wrapper");
+
+  btn.addEventListener("click", ()=> navWrapper.toggleAttribute("data-open"));
+</script>

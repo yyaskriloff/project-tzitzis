@@ -1,0 +1,18 @@
+---
+
+const {padding = 48} = Astro.props
+---
+
+<!-- slot are img, text-div and btn -->
+<header class="w-screen h-screen relative">
+  <!-- img background -->
+  <div class="absolute -z-10 h-screen">
+    <slot name="bg-img" />
+  </div>
+  <!-- green banner -->
+
+  <div class={`h-full w-2/3 bg-green-transparent py-${padding}`}>
+    <slot />
+    <slot name="btn" />
+  </div> 
+</header>
